@@ -1,0 +1,12 @@
+.outer-card {
+    width: 220px;
+    padding: 4px;
+    margin: 4px;
+}
+
+.outer-card:hover,
+.outer-card:focus {
+    width: 240px;
+    height: 200px;
+    transition: 0.2s ease-in-out;
+}
