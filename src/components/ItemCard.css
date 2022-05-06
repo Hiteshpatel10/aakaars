@@ -8,5 +8,5 @@
 .outer-card:focus {
     width: 240px;
     height: 200px;
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
