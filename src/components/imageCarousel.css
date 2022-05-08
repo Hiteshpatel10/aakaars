@@ -1,0 +1,27 @@
+.image-div {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-bg-div {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.image-fg-div {
+    position: absolute;
+    z-index: 1;
+}
+
+.image-fg {
+    object-fit: fill;
+    padding-top: 3px;
+}
+
+.image-bg {
+    margin-top: -250px;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
