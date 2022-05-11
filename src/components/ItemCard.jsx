@@ -1,5 +1,4 @@
 import React from "react";
-import phimg from "../assets/placeholderimg.jpg";
 import images from "../assets/images";
 import "./ItemCard.css";
 
@@ -9,7 +8,7 @@ export default function ItemCard() {
       <h3 className="itemcard-title">Our Products</h3>
       <div className="row">
         {images.map((item) => (
-          <div className="col-sm">
+          <div className="col">
             <div className="card outer-card shadow-sm mb-5 bg-white rounded">
               <img
                 className="card-img-top"
