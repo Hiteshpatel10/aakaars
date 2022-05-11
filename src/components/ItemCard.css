@@ -1,12 +1,22 @@
 .outer-card {
-    width: 220px;
-    padding: 4px;
-    margin: 4px;
+    width: 160px;
+    padding: 0px;
+    margin: 0 auto;
 }
 
 .outer-card:hover,
 .outer-card:focus {
-    width: 240px;
-    height: 200px;
-    transition: 0.4s ease-in-out;
+    width: 180px;
+    height: auto;
+    opacity: 0.9;
+    transition: 0.6s ease-in-out;
+}
+
+
+.itemcard-title {
+    padding-top: 15px;
+}
+
+.itemcard-title:hover {
+    text-decoration: underline;
 }
