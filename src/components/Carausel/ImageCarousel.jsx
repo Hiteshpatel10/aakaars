@@ -6,7 +6,6 @@ import "./imageCarousel.css";
 export default function ImageCarousel({ images }) {
   const settings = {
     infinite: true,
-    dots: true,
     slidesToShow: 1,
     arrows: true,
     slidesToScroll: 1,
@@ -36,10 +35,10 @@ export default function ImageCarousel({ images }) {
 
             <div className="image-fg div">
               <img
-                className="image-fg"
+                className="image-fg img-fluid"
                 src={item.src}
                 alt={item.alt}
-                style={{ width: 500, marginLeft: "auto", marginRight: "auto" }}
+                style={{ marginLeft: "auto", marginRight: "auto" }}
               />
             </div>
           </div>

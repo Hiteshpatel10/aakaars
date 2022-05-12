@@ -1,5 +1,10 @@
-import React from "react";
+import react from "react";
+import TempleCard from "../components/TempleCard";
 
-export default function About() {
-  return <div>akmhfaksdhf</div>;
+export default function about() {
+  return (
+    <div>
+      <TempleCard />
+    </div>
+  );
 }

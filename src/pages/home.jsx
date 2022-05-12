@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCard from "../components/ItemCard";
-import ImageCarousel from "../components/ImageCarousel";
+import ImageCarousel from "../components/Carausel/ImageCarousel";
+import TempleCard from "../components/TempleCard";
 import images from "../assets/images";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <ImageCarousel images={images} />
       <ItemCard />
+      <TempleCard />
     </div>
   );
 }
