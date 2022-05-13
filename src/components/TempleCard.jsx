@@ -17,7 +17,7 @@ export default function TempleCard() {
           <div className="temple-mid col text-center mt-auto mb-auto">
             <h1 className="temple-title">Home Temple</h1>
             <h6 className="temple-sub-title">500+ Options | From Rs.700</h6>
-            <a href="something" class="button3">
+            <a href="something" className="button3">
               Button
             </a>
           </div>
