@@ -9,4 +9,5 @@ type Product @model {
   category: String!
   price: Int!
   description: String
+  image: [String]
 }
