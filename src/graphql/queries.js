@@ -15,6 +15,7 @@ export const getProduct = /* GraphQL */ `
     }
   }
 `;
+
 export const listProducts = /* GraphQL */ `
   query ListProducts(
     $filter: ModelProductFilterInput

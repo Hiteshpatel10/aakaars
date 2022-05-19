@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import images from "../assets/images";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -40,7 +40,12 @@ export default function ItemCard() {
       <Slider {...settings}>
         {images.map((item) => (
           <div className="p-2">
-            <div className="card" onClick={() => navigate("productList")}>
+            <div
+              className="card"
+              onClick={() =>
+                navigate("productList", { state: { category: item.alt } })
+              }
+            >
               <img
                 className="card-img-top"
                 src={item.src}

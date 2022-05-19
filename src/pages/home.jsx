@@ -12,15 +12,14 @@ Amplify.configure(awsconfig);
 
 export default function Home() {
   const [product, productList] = useState([]);
-
   useEffect(() => {
     // fetchProductList();
   }, []);
   const fetchProductList = async () => {
     try {
       const products = await API.graphql(graphqlOperation(listProducts));
-      console.log("prodcut", products.data.listProducts.items);
       productList(products.data.listProducts.items);
+      console.log("prodcut", products);
     } catch (error) {
       console.log(error);
     }
