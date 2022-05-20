@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import ArtCard from "./artCard";
 import { API, graphqlOperation } from "aws-amplify";
 import { listProducts } from "../../graphql/queries";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function ProductList(category) {
+  let navigate = useNavigate();
   const { state } = useLocation();
   const [categoryList, setCategoryList] = useState([]);
 
@@ -32,9 +33,15 @@ export default function ProductList(category) {
       </div>
 
       <div className="row">
-        {categoryList.map((items) => (
-          <div className="col-md-3">
-            <ArtCard ArtData={items} />
+        {categoryList.map((item) => (
+          <div
+            className="col-md-3"
+            key={item.id}
+            onClick={() =>
+              navigate("productDetail", { state: { productData: item } })
+            }
+          >
+            <ArtCard ArtData={item} />
           </div>
         ))}
       </div>
