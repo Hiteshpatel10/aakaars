@@ -4,6 +4,9 @@ import NavBar from './components/NavBar/Navbar'
 import Home from './pages/home'
 import Contacts from './pages/contacts'
 import About from './pages/about'
+import ProductList from './components/products/productList'
+import DetailProductPage from './components/products/DetailProductPage/DetailProductPage'
+import UploadPortal from './components/UploadPortal'
 
 function App() {
   return (
@@ -13,8 +16,10 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<UploadPortal />} />
           <Route path='/contact' element={<Contacts />} />
+          <Route path='/productList' element={<ProductList />} />
+          <Route path='/productList/productDetail' element={<DetailProductPage />} />
         </Routes>
       </main>
 

@@ -1,0 +1,14 @@
+{
+  "resourceName": "aakaars100",
+  "policyUUID": "4e9e64d5",
+  "bucketName": "aakaars-storage-100",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "S3Triggerefb01389",
+  "groupAccess": {}
+}

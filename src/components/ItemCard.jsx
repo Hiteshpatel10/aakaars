@@ -1,10 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import images from "../assets/images";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ItemCard.css";
+import { useNavigate } from "react-router-dom";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -15,6 +16,7 @@ function getWindowDimensions() {
 }
 
 export default function ItemCard() {
+  let navigate = useNavigate();
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
@@ -23,9 +25,10 @@ export default function ItemCard() {
   if (windowDimensions.width < 500) a = 3;
 
   const settings = {
-    infinite: true,
+    infinite: false,
     slidesToShow: a,
     arrows: true,
+    dots: true,
     slidesToScroll: 1,
     lazyLoad: true,
     cssEase: "linear",
@@ -37,7 +40,12 @@ export default function ItemCard() {
       <Slider {...settings}>
         {images.map((item) => (
           <div className="p-2">
-            <div className="card ">
+            <div
+              className="card"
+              onClick={() =>
+                navigate("productList", { state: { category: item.alt } })
+              }
+            >
               <img
                 className="card-img-top"
                 src={item.src}

@@ -1,10 +1,12 @@
 import react from "react";
-import TempleCard from "../components/TempleCard";
+import ProductList from "../components/products/productList";
+import ArtItem from "../components/products/DetailProductPage/DetailProductPage";
 
 export default function about() {
   return (
     <div>
-      <TempleCard />
+      <ArtItem />
+      {/* <ProductList /> */}
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.img-container {
+    position: relative;
+}
+
+.image {
+    position: absolute;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
